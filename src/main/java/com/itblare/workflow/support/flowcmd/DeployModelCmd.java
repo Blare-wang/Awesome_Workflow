@@ -18,7 +18,6 @@ import org.flowable.form.engine.impl.persistence.entity.FormDefinitionEntity;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Objects;
@@ -33,7 +32,6 @@ import java.util.Optional;
  */
 public class DeployModelCmd implements Command<Deployment>, Serializable {
 
-    @Serial
     private static final long serialVersionUID = -5005111238268263861L;
 
     /**

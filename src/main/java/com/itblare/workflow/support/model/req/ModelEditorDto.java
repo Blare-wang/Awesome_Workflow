@@ -1,6 +1,5 @@
 package com.itblare.workflow.support.model.req;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -12,7 +11,6 @@ import java.io.Serializable;
  */
 public class ModelEditorDto implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = 2592199055701943897L;
 
     /**

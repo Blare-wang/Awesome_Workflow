@@ -1,9 +1,7 @@
 package com.itblare.workflow.support.model.resp;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * 模型信息
@@ -14,7 +12,6 @@ import java.util.Date;
  */
 public class ModelInfoDto implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = -3414599956466240151L;
 
     /**

@@ -89,6 +89,7 @@ public interface BaseQueryService<U> {
      * @return {@link PageInfoDto<T>}
      * @author Blare
      */
+    @SuppressWarnings("unchecked")
     default <T> PageInfoDto<T> pageList(PageInfoDto<T> pageInfoDto,
                                         Query<?, U> query,
                                         Class<? extends IListWrapper<T, U>> listWrapperClass,
@@ -105,7 +106,6 @@ public interface BaseQueryService<U> {
         if (Objects.nonNull(listWrapperClass)) {
             pageInfoDto.setRecords(listWrapper(listWrapperClass, list));
         } else {
-            //noinspection unchecked
             pageInfoDto.setRecords((List<T>) list);
         }
         pageInfoDto.setTotal(query.count());

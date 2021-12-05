@@ -1,6 +1,5 @@
 package com.itblare.workflow.support.model.req;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Map;
 import java.util.Set;
@@ -14,7 +13,6 @@ import java.util.Set;
  */
 public class BaseQueryDto implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = -72438043747795373L;
 
     /**

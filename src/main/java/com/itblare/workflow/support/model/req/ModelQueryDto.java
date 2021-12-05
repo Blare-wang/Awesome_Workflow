@@ -1,7 +1,5 @@
 package com.itblare.workflow.support.model.req;
 
-import java.io.Serial;
-
 /**
  * 模型查询参数
  *
@@ -11,7 +9,6 @@ import java.io.Serial;
  */
 public class ModelQueryDto extends BaseQueryDto {
 
-    @Serial
     private static final long serialVersionUID = 727400536972487981L;
 
     /**

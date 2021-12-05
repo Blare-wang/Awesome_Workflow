@@ -1,6 +1,5 @@
 package com.itblare.workflow.support.model.req;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -12,7 +11,6 @@ import java.io.Serializable;
  */
 public class ModelDto implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = -9186520863646506441L;
     /**
      * 模型ID

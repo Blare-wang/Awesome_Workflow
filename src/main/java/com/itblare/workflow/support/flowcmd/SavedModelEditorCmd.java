@@ -13,7 +13,6 @@ import org.flowable.engine.repository.Model;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.Objects;
@@ -27,7 +26,6 @@ import java.util.Objects;
  */
 public class SavedModelEditorCmd implements Command<String>, Serializable {
 
-    @Serial
     private static final long serialVersionUID = 2460004354895210140L;
 
     /**
