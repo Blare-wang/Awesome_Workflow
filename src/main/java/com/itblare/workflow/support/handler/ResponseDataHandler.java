@@ -6,7 +6,6 @@ import com.itblare.workflow.support.constant.CommonConstant;
 import com.itblare.workflow.support.exceptions.BaseException;
 import com.itblare.workflow.support.result.ResponseDataFactory;
 import com.itblare.workflow.support.result.ResponseDataWrapper;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -32,7 +31,7 @@ import java.util.Objects;
 public class ResponseDataHandler implements ResponseBodyAdvice<Object> {
 
     @Override
-    public boolean supports(MethodParameter methodParameter, @NotNull Class<? extends HttpMessageConverter<?>> converterType) {
+    public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> converterType) {
 
         // 如果接口返回的类型本身就是ResultVO那就没有必要进行额外的操作，返回false
         if (methodParameter.getGenericParameterType().equals(ResponseDataWrapper.class)) {
@@ -47,10 +46,10 @@ public class ResponseDataHandler implements ResponseBodyAdvice<Object> {
     }
 
     @Override
-    public Object beforeBodyWrite(Object body, @NotNull MethodParameter returnType, MediaType mediaType,
-                                  @NotNull Class<? extends HttpMessageConverter<?>> converterType,
-                                  @NotNull ServerHttpRequest request,
-                                  @NotNull ServerHttpResponse response) {
+    public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType mediaType,
+                                  Class<? extends HttpMessageConverter<?>> converterType,
+                                  ServerHttpRequest request,
+                                  ServerHttpResponse response) {
 
         // 响应的Content-Type为JSON格式
         if (mediaType.includes(MediaType.APPLICATION_JSON) || MediaType.APPLICATION_JSON.equals(mediaType)) {

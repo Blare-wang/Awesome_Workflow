@@ -2,7 +2,6 @@ package com.itblare.workflow.support.interceptor;
 
 import com.itblare.workflow.support.annotation.ResponseWrapper;
 import com.itblare.workflow.support.constant.CommonConstant;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.method.HandlerMethod;
@@ -24,10 +23,10 @@ import java.util.Objects;
 public class ResponseWrapperInterceptor implements HandlerInterceptor {
 
     @Override
-    public boolean preHandle(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response, @NotNull Object handler) {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
 
         if (handler instanceof HandlerMethod) {
-            HandlerMethod handlerMethod = (HandlerMethod)handler;
+            HandlerMethod handlerMethod = (HandlerMethod) handler;
             final Class<?> classType = handlerMethod.getBeanType();
             final Method method = handlerMethod.getMethod();
             // 确保当前类是RestController，不然不进行封装
