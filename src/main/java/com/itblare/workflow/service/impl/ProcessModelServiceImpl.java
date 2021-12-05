@@ -19,6 +19,7 @@ import org.flowable.engine.impl.ModelQueryProperty;
 import org.flowable.engine.repository.Model;
 import org.flowable.engine.repository.ModelQuery;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -61,6 +62,7 @@ public class ProcessModelServiceImpl extends FlowableFactory implements ProcessM
     );
 
     @Override
+    @Transactional
     public void saveModel(ModelDto modelDto) {
         if (CommonUtil.isEmptyAfterStrip(modelDto.getKey())) {
             throw new IllegalArgumentException("模型标识 KEY 为空！");
@@ -83,6 +85,7 @@ public class ProcessModelServiceImpl extends FlowableFactory implements ProcessM
     }
 
     @Override
+    @Transactional
     public void copyModel(String id) {
         if (CommonUtil.isEmptyAfterStrip(id)) {
             throw new IllegalArgumentException("待复制模型ID为空！");
@@ -103,6 +106,7 @@ public class ProcessModelServiceImpl extends FlowableFactory implements ProcessM
     }
 
     @Override
+    @Transactional
     public void deleteModel(Set<String> ids, boolean cascade) {
         if (CommonUtil.isEmptyCollection(ids)) {
             throw new IllegalArgumentException("模型ID为空！");
@@ -117,6 +121,7 @@ public class ProcessModelServiceImpl extends FlowableFactory implements ProcessM
     }
 
     @Override
+    @Transactional
     public void saveModelEditor(ModelEditorDto modelEditorDto) {
         if (Objects.isNull(modelEditorDto.getId()) || modelEditorDto.getId().isBlank()) {
             throw new IllegalArgumentException("流程设计ID为空！");
@@ -135,6 +140,7 @@ public class ProcessModelServiceImpl extends FlowableFactory implements ProcessM
     }
 
     @Override
+    @Transactional
     public void deployModel(String id) {
         if (CommonUtil.isEmptyAfterStrip(id)) {
             throw new IllegalArgumentException("模型ID为空！");
@@ -143,6 +149,7 @@ public class ProcessModelServiceImpl extends FlowableFactory implements ProcessM
     }
 
     @Override
+    @Transactional
     public void doImport(String tenantId, MultipartFile file) {
         if (Objects.isNull(file) || file.isEmpty()) {
             throw new IllegalArgumentException("部署文件为空！");
