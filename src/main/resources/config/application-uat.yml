@@ -1,0 +1,10 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /flow-uat
+spring:
+  config:
+    activate:
+      on-profile: uat
+logging:
+  config: classpath:log/log4j2-uat.yml

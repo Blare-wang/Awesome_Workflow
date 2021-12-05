@@ -1,0 +1,10 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /flow
+spring:
+  config:
+    activate:
+      on-profile: prod
+logging:
+  config: classpath:log/log4j2-prod.yml

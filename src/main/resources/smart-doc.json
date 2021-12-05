@@ -1,0 +1,73 @@
+{
+  "serverUrl": "http://127.0.0.1:8081/flow-dev",
+  "isStrict": false,
+  "allInOne": true,
+  "outPath": "src/main/resources/static/doc",
+  "coverOld": true,
+  "createDebugPage": true,
+  "allInOneDocFileName": "index.html",
+  "packageFilters": "com.itblare.workflow.api.*",
+  "md5EncryptedHtmlName": false,
+  "style": "xt256",
+  "projectName": "Awesome_Workflow",
+  "showAuthor": true,
+  "requestFieldToUnderline": false,
+  "responseFieldToUnderline": false,
+  "inlineEnum": true,
+  "skipTransientField": true,
+  "requestExample": true,
+  "responseExample": true,
+  "displayActualType": true,
+  "appToken": "93a8f8a3d4094686b82cb946e37908db",
+  "appKey": "20210824879664577120305152",
+  "secret": "7sSO5W*L$W!7.lN7ieQizcu$C2v&$Qeg",
+  "openUrl": "https://www.itblare.com/torna_server/api",
+  "debugEnvName": "工作流API测试环境文档",
+  "debugEnvUrl": "http://127.0.0.1:8081/api",
+  "groups": [
+    {
+      "name": "工作流API",
+      "apis": "com.itblare.workflow.api.flow.*"
+    },
+    {
+      "name": "默认分组",
+      "apis": "com.itblare.workflow.api",
+      "paths": "/test/**"
+    }
+  ],
+  "revisionLogs": [
+    {
+      "version": "1.0.0",
+      "status": "create",
+      "author": "Blare",
+      "revisionTime": "2021-07-05",
+      "remarks": "自定义maven项目骨架开放API文档"
+    }
+  ],
+  "errorCodes": [
+    {
+      "value": "200",
+      "type": "string",
+      "desc": "响应成功"
+    }
+  ],
+  "requestHeaders": [
+    {
+      "name": "token",
+      "type": "string",
+      "desc": "占用符，可忽略！",
+      "required": false,
+      "value": "token请求头的值",
+      "since": "1.0.0"
+    }
+  ],
+  "responseBodyAdvice": {
+    "className": "com.itblare.workflow.support.result.ResponseDataWrapper"
+  },
+  "sourceCodePaths": [
+    {
+      "path": "src/main/java",
+      "desc": "设置代码路径, 插件已经能够自动下载发布的源码包，没必要配置"
+    }
+  ]
+}

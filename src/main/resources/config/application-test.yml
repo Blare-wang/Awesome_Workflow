@@ -1,0 +1,10 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /flow-test
+spring:
+  config:
+    activate:
+      on-profile: test
+logging:
+  config: classpath:log/log4j2-test.yml

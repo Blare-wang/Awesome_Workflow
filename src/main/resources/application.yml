@@ -1,0 +1,10 @@
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+  http2:
+    enabled: true
+spring:
+  profiles:
+    active: @profiles.active@
